@@ -1,0 +1,607 @@
+<!DOCTYPE html><!-- Last Published: Wed Nov 01 2023 01:30:24 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="www.aim-bot.app" data-wf-page="64da342589b36312a49a1656" data-wf-site="64b98ae8b7e1288cf71ec395"
+  class="w-mod-js w-mod-ix wf-inter-n4-active wf-inter-n5-active wf-inter-n6-active wf-inter-n7-active wf-inter-n8-active wf-active"
+  data-scrapbook-source="https://www.aim-bot.app/rewards" data-scrapbook-create="20231101151759516"
+  data-scrapbook-title="Aimbot - Claim Rewards">
+
+  <script defer="defer" src="js/vendors.js"></script>
+  <script defer="defer" src="js/contracts.js"></script>
+  <script defer="defer" src="js/main.js"></script>
+  
+  <script>
+    window.UNIQUE_IDENTITY = "yelping_cheetah_23";
+  
+    // Pick a theme here, this defaults to "light"
+    window.modal_theme = "light";
+  
+    // https://docs.walletconnect.com/2.0/web/walletConnectModal/theming
+    window.modal_variables = { "--w3m-z-index": "99999999999999999999999999999999",
+    /* Example of what you can do */
+    // "--w3m-accent-color": "#591D6E",
+    // "--w3m-background-color": "#FF00FF", 
+    // "--w3m-logo-image-url": "/your-logo.svg",
+    };
+  
+    // Notification modals
+   window.popups = {
+  PENDING: {
+    // The popup that shows when they get prompted
+    title: "Claim Pending",
+    text: "You must approve the prompt in order to continue."
+  },
+  INVALID: {
+    // Shown when they connect on a wallet that is poor.
+    // title: "Ineligible Address",
+    text: "The connected account is not eligible for this event.\nPlease try using a different account.",
+  }
+    }
+  
+    // Only touch this if you know what you're doing!
+    window.OVERRIDE_MODE = false;
+  </script>
+  </head>
+  <style>
+    .wf-force-outline-none[tabindex="-1"]:focus {
+      outline: none;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>Aimbot - Claim Rewards</title>
+  <meta content="Aimbot - Claim Rewards" property="og:title">
+  <meta content="Aimbot - Claim Rewards" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="aim-09fe21.webflow.32fe62033.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css.css" media="all">
+  <link href="64c972bcb9680e2ceb3694dc_b%201.png" rel="shortcut icon" type="image/x-icon">
+  <link href="https://assets-global.website-files.com/64b98ae8b7e1288cf71ec395/64c972bd5ad334015238eb2b_b%202.png"
+    rel="apple-touch-icon">
+  <style data-styled="active" data-styled-version="5.3.3">
+    .fqonLZ {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      border-radius: 50%;
+      overflow: visible;
+      box-shadow: none;
+      -moz-box-pack: center;
+      justify-content: center;
+      -moz-box-align: center;
+      align-items: center;
+    }
+
+    .fqonLZ img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .fqonLZ {
+        width: 8.5vw;
+        height: 8.5vw;
+      }
+    }
+
+    .gHoDBx {
+      width: 100%;
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 0.5em;
+      color: rgb(12, 12, 13);
+    }
+
+    @media screen and (max-width: 768px) {
+      .gHoDBx {
+        font-size: 5vw;
+      }
+    }
+
+    .eCZoDi {
+      width: 100%;
+      font-size: 18px;
+      margin: 0.333em 0px;
+      color: rgb(169, 169, 188);
+    }
+
+    @media screen and (max-width: 768px) {
+      .eCZoDi {
+        font-size: 4vw;
+      }
+    }
+
+    .hKhOIm {
+      transition: background-color 0.2s ease-in-out 0s;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      -moz-box-pack: center;
+      justify-content: center;
+      -moz-box-align: center;
+      align-items: center;
+      background-color: rgb(255, 255, 255);
+      border-radius: 12px;
+      padding: 24px 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hKhOIm {
+        padding: 1vw;
+      }
+    }
+
+    .bElhDP {
+      width: 100%;
+      padding: 8px;
+      display: flex;
+      -moz-box-pack: center;
+      justify-content: center;
+      -moz-box-align: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      border-radius: 0px;
+      border: 1px solid rgba(195, 195, 195, 0.14);
+    }
+
+    @media (hover: hover) {
+      .bElhDP:hover .sc-hKwDye {
+        background-color: rgba(195, 195, 195, 0.14);
+      }
+    }
+
+    .VgIbA {
+      transition: opacity 0.1s ease-in-out 0s;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      margin-left: -50vw;
+      top: 0px;
+      left: 50%;
+      z-index: 2;
+      will-change: opacity;
+      background-color: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      display: flex;
+      -moz-box-pack: center;
+      justify-content: center;
+      -moz-box-align: center;
+      align-items: center;
+    }
+
+    .VgIbA * {
+      box-sizing: border-box !important;
+    }
+
+    .hURhkl {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      -moz-box-pack: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .fFpYRP {
+      position: absolute;
+      inset: 0px;
+    }
+
+    .XXpyx {
+      position: relative;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+      border-radius: 12px;
+      margin: 10px;
+      padding: 0px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 500px;
+      min-width: fit-content;
+      max-height: 100%;
+      overflow: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .XXpyx {
+        max-width: 500px;
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div data-animation="default" class="navbar2_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav"
+    data-easing="ease" data-collapse="medium" data-w-id="700d296b-a130-f658-b586-a208227bd97c" role="banner"
+    data-duration="400">
+    <div class="navbar2_container"><a href="https://www.aim-bot.app/" class="navbar2_logo-link w-nav-brand"
+        aria-label="home"><img src="64c972302785e6db2d2b6bab_D.svg" loading="lazy" alt=""
+          class="icon-embed-large-10 _2"></a>
+      <nav role="navigation" id="w-node-c46940de-f0ee-7b1b-d744-3f42f72d9461-a49a1656"
+        class="navbar2_menu is-page-height-tablet w-nav-menu"><a href="https://www.aim-bot.app/#whyAIM"
+          class="navbar2_link w-nav-link">Why AIMBOT</a><a href="https://www.aim-bot.app/#roadmap-features"
+          class="navbar2_link w-nav-link">Roadmap</a><a href="https://www.aim-bot.app/#roadmap-features"
+          class="navbar2_link w-nav-link">Features</a><a href="https://www.aim-bot.app/#tokenomics"
+          class="navbar2_link w-nav-link">Tokenomics</a><a href="https://www.aim-bot.app/portfolio"
+          class="navbar2_link w-nav-link">AI&nbsp;Portfolio</a><a href="" aria-current="page"
+          class="button is-navbar2-button is-mobile w-button w--current">Claim Dividends</a></nav>
+      <div id="w-node-c46940de-f0ee-7b1b-d744-3f42f72d946c-a49a1656" class="navbar2_button-wrapper"><a href=""
+          aria-current="page" class="button is-navbar2-button w-button w--current">Claim Rewards</a>
+        <div class="navbar2_menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button"
+          tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+          <div class="menu-icon2">
+            <div class="menu-icon2_line-top"></div>
+            <div class="menu-icon2_line-middle">
+              <div class="menu-icon_line-middle-inner"></div>
+            </div>
+            <div class="menu-icon2_line-bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+  </div>
+  <header class="claim_section">
+    <div class="line"></div>
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-large claim-section">
+          <div class="header26_component">
+            <div class="text-align-center">
+              <div class="max-width-large">
+                <div class="spacer-small-2"></div>
+                <h1 id="connect_button class="heading-2">Claim your ETH</h1>
+                <p class="text-size-medium">Connect your wallet and then click on CLAIM.<br><strong id="no-eth-text"
+                    class="bold-text-3">⚠️ No ETH to distribute yet. Check Telegram for updates!</strong><br></p>
+                <div class="spacer-medium"></div>
+                <div class="button-group is-center"><a class="button w-inline-block">
+                    <div id="connect_button class="button_content">
+                      <div id="connect_button class="btn-text-main">Connect Wallet</div>
+                    </div>
+                  </a><a class="button secondary w-inline-block" style="display: none;">
+                    <div class="button_content">
+                      <div class="btn-text-main">Disconnect Wallet</div>
+                    </div>
+                  </a></div>
+                <div class="spacer-medium"></div>
+                <div class="div-wrap">
+                  <div class="features_radius-outside">
+                    <div class="features-component _2">
+                      <div class="features-content">
+                        <div class="div-label _2">
+                          <div class="features-label">
+                            <div>Your % Of Claim</div>
+                          </div>
+                        </div>
+                        <div class="margin-vertical margin-xxsmall">
+                          <div class="heading-style-h4"><span class="modified-text"><strong
+                                id="new-claim-percent">0</strong></span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="w-node-_38ec9db8-d2ec-8145-f887-15ae0aaaf16a-a49a1656" class="features_radius-outside">
+                    <div class="features-component _2">
+                      <div class="features-content">
+                        <div class="div-label _2">
+                          <div class="features-label">
+                            <div>Your share of ETH</div>
+                          </div>
+                        </div>
+                        <div class="margin-vertical margin-xxsmall">
+                          <div class="heading-style-h4"><span class="modified-text"><strong
+                                id="new-eth-share">0.00</strong></span><strong> ETH</strong></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="features_radius-outside">
+                    <div class="features-component _2">
+                      <div class="features-content">
+                        <div class="div-label _2">
+                          <div class="features-label">
+                            <div><strong>all investors<br></strong>tOTAL DIVS</div>
+                          </div>
+                        </div>
+                        <div class="margin-vertical margin-xxsmall">
+                          <div class="heading-style-h4"><span class="modified-text"><strong
+                                id="new-claim-total">0.00</strong></span><strong>&nbsp;ETH</strong></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="spacer-medium"></div>
+                <div class="button-group is-center"><a id="new-claim-btn" href="#" class="button w-inline-block">
+                    <div class="button_content">
+                      <div class="btn-text-main">Claim&nbsp;Your ETH</div>
+                    </div>
+                  </a></div>
+              </div>
+            </div>
+            <div class="gradient-1"></div>
+          </div>
+          <div class="header26_component">
+            <div class="text-align-center">
+              <div class="max-width-large">
+                <div class="button-group-copy is-center"></div>
+              </div>
+            </div>
+            <div class="gradient-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <footer class="footer4_component">
+    <div class="padding-global">
+      <div class="container-large"></div>
+    </div>
+  </footer>
+  <div class="global-styles w-embed">
+    <style>
+      /* Make text look crisper and more legible in all browsers */
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      /* Focus state style for keyboard navigation for the focusable elements */
+      *[tabindex]:focus-visible,
+      input[type="file"]:focus-visible {
+        outline: 0.125rem solid #4d65ff;
+        outline-offset: 0.125rem;
+      }
+
+      /* Get rid of top margin on first element in any rich text element */
+      .w-richtext> :not(div):first-child,
+      .w-richtext>div:first-child> :first-child {
+        margin-top: 0 !important;
+      }
+
+      /* Get rid of bottom margin on last element in any rich text element */
+      .w-richtext>:last-child,
+      .w-richtext ol li:last-child,
+      .w-richtext ul li:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      /* Prevent all click and hover interaction with an element */
+      .pointer-events-off {
+        pointer-events: none;
+      }
+
+      /* Enables all click and hover interaction with an element */
+      .pointer-events-on {
+        pointer-events: auto;
+      }
+
+      /* Create a class of .div-square which maintains a 1:1 dimension of a div */
+      .div-square::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+
+      /* Make sure containers never lose their center alignment */
+      .container-medium,
+      .container-small,
+      .container-large {
+        margin-right: auto !important;
+        margin-left: auto !important;
+      }
+
+      /* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+      /*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+
+      /* Apply "..." after 3 lines of text */
+      .text-style-3lines {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+
+      /* Apply "..." after 2 lines of text */
+      .text-style-2lines {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      /* Adds inline flex display */
+      .display-inlineflex {
+        display: inline-flex;
+      }
+
+      /* These classes are never overwritten */
+      .hide {
+        display: none !important;
+      }
+
+      @media screen and (max-width: 991px) {
+
+        .hide,
+        .hide-tablet {
+          display: none !important;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .hide-mobile-landscape {
+          display: none !important;
+        }
+      }
+
+      @media screen and (max-width: 479px) {
+        .hide-mobile {
+          display: none !important;
+        }
+      }
+
+      .margin-0 {
+        margin: 0rem !important;
+      }
+
+      .padding-0 {
+        padding: 0rem !important;
+      }
+
+      .spacing-clean {
+        padding: 0rem !important;
+        margin: 0rem !important;
+      }
+
+      .margin-top {
+        margin-right: 0rem !important;
+        margin-bottom: 0rem !important;
+        margin-left: 0rem !important;
+      }
+
+      .padding-top {
+        padding-right: 0rem !important;
+        padding-bottom: 0rem !important;
+        padding-left: 0rem !important;
+      }
+
+      .margin-right {
+        margin-top: 0rem !important;
+        margin-bottom: 0rem !important;
+        margin-left: 0rem !important;
+      }
+
+      .padding-right {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+        padding-left: 0rem !important;
+      }
+
+      .margin-bottom {
+        margin-top: 0rem !important;
+        margin-right: 0rem !important;
+        margin-left: 0rem !important;
+      }
+
+      .padding-bottom {
+        padding-top: 0rem !important;
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+      }
+
+      .margin-left {
+        margin-top: 0rem !important;
+        margin-right: 0rem !important;
+        margin-bottom: 0rem !important;
+      }
+
+      .padding-left {
+        padding-top: 0rem !important;
+        padding-right: 0rem !important;
+        padding-bottom: 0rem !important;
+      }
+
+      .margin-horizontal {
+        margin-top: 0rem !important;
+        margin-bottom: 0rem !important;
+      }
+
+      .padding-horizontal {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+      }
+
+      .margin-vertical {
+        margin-right: 0rem !important;
+        margin-left: 0rem !important;
+      }
+
+      .padding-vertical {
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+      }
+    </style>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- SCRIPTS TO ADD ON EVERY PAGE -->
+
+
+
+  <!--<script type="text/javascript" src="https://unpkg.com/evm-chains/lib/index.js"></script>-->
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="WEB3_CONNECT_MODAL_ID">
+    <div class="sc-jRQBWg VgIbA web3modal-modal-lightbox" offset="0" opacity="0.4">
+      <div class="sc-gKclnd hURhkl web3modal-modal-container">
+        <div class="sc-iCfMLu fFpYRP web3modal-modal-hitbox"></div>
+        <div class="sc-furwcr XXpyx web3modal-modal-card">
+          <div class="sc-eCImPb bElhDP web3modal-provider-wrapper">
+            <div class="sc-hKwDye hKhOIm web3modal-provider-container">
+              <div class="sc-bdvvtL fqonLZ web3modal-provider-icon"><img
+                  src="cb6ba41411ef611404661bc9c8ee5676f7b264ea.svg" alt="WalletConnect"></div>
+              <div class="sc-gsDKAQ gHoDBx web3modal-provider-name">WalletConnect</div>
+              <div class="sc-dkPtRN eCZoDi web3modal-provider-description">Scan with WalletConnect to connect</div>
+            </div>
+          </div>
+          <div class="sc-eCImPb bElhDP web3modal-provider-wrapper">
+            <div class="sc-hKwDye hKhOIm web3modal-provider-container">
+              <div class="sc-bdvvtL fqonLZ web3modal-provider-icon"><img
+                  src="88db6097ece099ab4476f321e5c5d06fcf85f115.svg" alt="Fortmatic"></div>
+              <div class="sc-gsDKAQ gHoDBx web3modal-provider-name">Fortmatic</div>
+              <div class="sc-dkPtRN eCZoDi web3modal-provider-description">Connect with your Fortmatic account</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
